@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lovers Quarrel', cursive;
+}
+body{
+    background-color: #FF9A90;
+    background-color: #191919;   
+    color: #ffffff;
+}
+.landing{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.title{
+    position: absolute;
+    letter-spacing: 1vw;
+    top: 16vw;
+    left: 49%;
+    font-size: 7vw;
+    z-index: 10;
+}
+.balloon{
+    position: absolute;
+    top: 20%;
+    transform: translateX(75vw);
+    display: block;
+    width: 20vw;
+}
+.hat{
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    height: 100vh;
+    z-index: 5;
+}
+.enter{
+    font-size: 2vw;
+    padding: 8px 15px;
+    border: 2px solid yellow;
+    border-radius: 1vw;
+    width: fit-content;
+    position: absolute;
+    top: 33vw;
+    left: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    background-color:  #272626;
+}
+.enter:hover{
+    border-color: #F3705A;
+    background-color: unset;
+}
+@media only screen and (max-width:780px){
+    .hat{
+        display: none;
+    }
+    .landing{
+        width: fit-content;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-evenly;
+    }
+    .title,.enter,.balloon,.hat{
+        transform: unset;
+        position: unset;
+        height: fit-content;
+        width: fit-content;
+    }
+    .title{
+        font-size: 50px;
+        letter-spacing: 8px;
+    }
+    .enter{
+        font-size: medium;
+        border-radius: 10px;
+        padding: 6px 12px;
+    }
+    .balloon{
+        width: 180px;
+    }
+}

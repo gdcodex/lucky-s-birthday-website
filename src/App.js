@@ -1,10 +1,11 @@
 import React from 'react'
+import Landing from './landing/landing'
 
 function App() {
   return (
-    <div>
-      Hello Luck !
-    </div>
+    <main>
+      <Landing/>
+    </main>
   )
 }
 
