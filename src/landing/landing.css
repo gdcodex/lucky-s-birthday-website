@@ -1,88 +1,130 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lovers Quarrel', cursive;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lovers Quarrel", cursive;
 }
-body{
-    background-color: #FF9A90;
-    background-color: #191919;   
-    color: #ffffff;
+body {
+  background-color: #ff9a90;
+  background-color: #191919;
+  color: #ffffff;
+  overflow-x: hidden;
 }
-.landing{
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+.landing {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
 }
-.title{
-    position: absolute;
-    letter-spacing: 1vw;
-    top: 16vw;
-    left: 49%;
-    font-size: 7vw;
-    z-index: 10;
+.exit {
+  -webkit-animation: fade-out-right 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: fade-out-right 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-.balloon{
-    position: absolute;
-    top: 20%;
-    transform: translateX(75vw);
-    display: block;
-    width: 20vw;
+.entry{
+  -webkit-animation: enter 1.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: enter 1.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-.hat{
-    object-fit: cover;
-    position: absolute;
-    bottom: 0;
-    left: 20%;
-    height: 100vh;
-    z-index: 5;
+@-webkit-keyframes enter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.enter{
-    font-size: 2vw;
-    padding: 8px 15px;
-    border: 2px solid yellow;
-    border-radius: 1vw;
-    width: fit-content;
-    position: absolute;
-    top: 33vw;
-    left: 50%;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    background-color:  #272626;
+@keyframes enter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.enter:hover{
-    border-color: #F3705A;
-    background-color: unset;
+ @-webkit-keyframes fade-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 0;
+  }
 }
-@media only screen and (max-width:780px){
-    .hat{
-        display: none;
-    }
-    .landing{
-        width: fit-content;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: space-evenly;
-    }
-    .title,.enter,.balloon,.hat{
-        transform: unset;
-        position: unset;
-        height: fit-content;
-        width: fit-content;
-    }
-    .title{
-        font-size: 50px;
-        letter-spacing: 8px;
-    }
-    .enter{
-        font-size: medium;
-        border-radius: 10px;
-        padding: 6px 12px;
-    }
-    .balloon{
-        width: 180px;
-    }
+@keyframes fade-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 0;
+  }
+}
+
+.hat {
+  object-fit: cover;
+  height: 85%;
+  z-index: 5;
+  /* border: 1px solid pink; */
+}
+
+.title {
+  letter-spacing: 1vw;
+  font-size: 7vw;
+  z-index: 10;
+}
+.enter {
+  font-size: 2vw;
+  padding: 8px 15px;
+  border: 2px solid yellow;
+  border-radius: 1vw;
+  width: fit-content;
+  transition: all 0.4s ease;
+  position: relative;
+  background-color: #272626;
+}
+.enter:hover {
+  border-color: #f3705a;
+  background-color: unset;
+}
+.letter {
+  transition: color 0.4s ease;
+}
+.letter:hover {
+  color: #f3705a;
+}
+.balloon {
+  width: 25vw;
+  display: none;
+}
+@media only screen and (max-width: 665px) {
+  .hat {
+    display: none;
+  }
+  .landing {
+    flex-direction: column-reverse;
+  }
+
+  .title {
+    font-size: 50px;
+    letter-spacing: 8px;
+  }
+  .enter {
+    font-size: medium;
+    border-radius: 10px;
+    padding: 6px 12px;
+  }
+  .balloon {
+    width: 180px;
+    display: unset;
+  }
+  .welcome{
+    font-size: 60px;
+  }
 }
