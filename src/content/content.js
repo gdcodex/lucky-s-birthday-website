@@ -4,20 +4,20 @@ const gallery = [
   "food.jpg",
   "holi.jpg",
   "feeding.jpg",
-  "pose.jpg",
   "aesthetic.jpg",
   "fall.jpg",
   "jewel.jpg",
   "sleepy.jpg",
 ];
 function Content() {
-  useEffect(() => {
-    gallery.map((e, i) => {
-      document.querySelector(`#intro${i}`).style.left = `${i * 12}vw`;
-    });
-  }, []);
+//   useEffect(() => {
+//     gallery.map((e, i) => {
+//       document.querySelector(`#intro${i}`).style.left = `${i * 12}vw`;
+//     });
+//   }, []);
   return (
     <div className="content-container">
+    <section className="bigger">
       {gallery.map((e, i) => (
         <img
           key={i}
@@ -26,7 +26,8 @@ function Content() {
           src={`/images/${e}`}
         />
       ))}
-      <p className="lucky">Lucky!</p>
+    </section>
+   
     </div>
   );
 }

@@ -10,6 +10,15 @@
   -webkit-animation: fade-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   animation: fade-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
+.bigger{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid pink;
+    overflow: hidden;
+}
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
@@ -27,11 +36,11 @@
   }
 }
 .intro-pictures{
-    position: absolute;
     width: 200px;
     border: 2px solid #f3705a;
     border-radius: 10px;
     object-fit: cover;
+    transition: all 1s ease;
 }
 .intro-pictures:nth-child(odd){
     top: 13%;
@@ -40,4 +49,10 @@
 .intro-pictures:nth-child(even){
     top: 33%;
     transform: rotateZ(-15deg);
+}
+@media only screen and (max-width: 665px) {
+    .intro-pictures{
+        width: 90px;
+    }
+ 
 }
