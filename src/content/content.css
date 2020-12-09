@@ -16,7 +16,6 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
-    border: 1px solid pink;
     overflow: hidden;
 }
 @-webkit-keyframes fade-in {
@@ -40,7 +39,8 @@
     border: 2px solid #f3705a;
     border-radius: 10px;
     object-fit: cover;
-    transition: all 1s ease;
+    transition: all 2s ease;
+    opacity: 0;
 }
 .intro-pictures:nth-child(odd){
     top: 13%;

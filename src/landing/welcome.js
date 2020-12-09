@@ -8,7 +8,7 @@ function Welcome() {
         setTimeout(() => {
             history.push('/landing')
         }, 4000);
-    },[])
+    },[history])
     return (
         <div className="welcome-container">
        <p className="welcome">

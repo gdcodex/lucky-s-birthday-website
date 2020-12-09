@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import {useHistory} from 'react-router-dom'
 import "./content.css";
 const gallery = [
   "food.jpg",
@@ -10,11 +11,28 @@ const gallery = [
   "sleepy.jpg",
 ];
 function Content() {
-//   useEffect(() => {
-//     gallery.map((e, i) => {
-//       document.querySelector(`#intro${i}`).style.left = `${i * 12}vw`;
-//     });
-//   }, []);
+    const history = useHistory();
+  useEffect(() => {
+      let i=0;
+        const interval= setInterval(() => {
+            if(i<6){
+                if(document.querySelector(`#intro${i}`) ) document.querySelector(`#intro${i}`).style.opacity = `1`;
+            }
+            i++;
+        }, 300);
+        setTimeout(() => {
+            document.querySelectorAll(`.intro-pictures`).forEach(v=>v.style.opacity = `0`)
+        }, 3000);
+       const push= setTimeout(() => {
+            history.push("/contentpage")
+        }, 5000);
+        if(i===5){
+            clearInterval(interval)
+        }
+        return () => {
+            clearInterval(push);
+        };
+  }, []);
   return (
     <div className="content-container">
     <section className="bigger">
