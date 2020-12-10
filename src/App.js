@@ -4,6 +4,7 @@ import AnimatedCursor from "react-animated-cursor"
 import Content from './content/content'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Welcome from './landing/welcome'
+import Contentpage from './content/contentpage'
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
    </Route>
    <Route path="/content" exact>
       <Content/>
+   </Route>
+   <Route path="/contentpage" exact>
+      <Contentpage/>
    </Route>
     </main>
     </Router>

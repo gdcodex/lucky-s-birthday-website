@@ -32,7 +32,7 @@ function Content() {
         return () => {
             clearInterval(push);
         };
-  }, []);
+  }, [history]);
   return (
     <div className="content-container">
     <section className="bigger">
@@ -41,6 +41,7 @@ function Content() {
           key={i}
           className="intro-pictures"
           id={`intro${i}`}
+          alt="lucky"
           src={`/images/${e}`}
         />
       ))}

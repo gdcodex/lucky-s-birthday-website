@@ -7,7 +7,7 @@ function Welcome() {
     useEffect(()=>{
         setTimeout(() => {
             history.push('/landing')
-        }, 6000);
+        }, 5500);
     },[history])
     return (
         <div className="welcome-container">
