@@ -44,6 +44,7 @@ function Content() {
           src={`/images/${e}`}
         />
       ))}
+      <audio src="/audio/oye2.mp3" autoPlay style={{display:"none"}}></audio>
     </section>
    
     </div>

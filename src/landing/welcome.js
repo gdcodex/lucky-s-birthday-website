@@ -7,13 +7,14 @@ function Welcome() {
     useEffect(()=>{
         setTimeout(() => {
             history.push('/landing')
-        }, 4000);
+        }, 6000);
     },[history])
     return (
         <div className="welcome-container">
        <p className="welcome">
            Welcome Lucky!
        </p>
+       <audio src="/audio/oye1.mp3" autoPlay style={{display:"none"}}></audio>
        </div>
     )
 }
