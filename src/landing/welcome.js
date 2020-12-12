@@ -14,7 +14,7 @@ function Welcome() {
        <p className="welcome">
            Welcome Lucky!
        </p>
-       <audio src="/audio/oye1.mp3" autoPlay style={{display:"none"}}></audio>
+       {/* <audio src="/audio/oye1.mp3" autoPlay style={{display:"none"}}></audio> */}
        </div>
     )
 }
