@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./content.css";
 const gallery = [
   "food.jpg",
@@ -10,14 +10,13 @@ const gallery = [
   "sleepy.jpg",
 ];
 function Content() {
-  const [opac, setopac] = useState(0);
   return (
     <div className="content-container">
       <section className="bigger">
         {gallery.map((e, i) => (
           <img
             key={i}
-            className={`intro-pictures ${opac===i ? "opac" : ""}`}
+            className="intro-pictures"
             id={`intro${i}`}
             alt="lucky"
             src={`/images/${e}`}
